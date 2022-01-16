@@ -2,9 +2,15 @@ from ast import Return
 from flask import Flask, redirect, url_for, request
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return redirect(url_for('login')) 
+  
 @app.route('/success/<name>')
 def success(name):
    return 'welcome %s' % name
+
 @app.route('/login',methods = ['POST', 'GET'])
 def login():
    if request.method == 'POST':

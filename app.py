@@ -12,7 +12,7 @@ def login():
    
    if request.method == 'POST':
       if request.form['password'] != 'admin':
-         error = 'Invalid username or password. Please try again!'
+         error = 'Wrong SecretKey'
       else:
          flash('You were successfully logged in')
          return redirect(url_for('success'))

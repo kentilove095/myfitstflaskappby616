@@ -15,7 +15,9 @@ def login():
       if request.form['password'] != 'admin':
          error = 'Invalid username or password. Please try again!'
       else:
+         flash('You were successfully logged in')
          return redirect(url_for('success'))
+   return render_template('login.html', error = error)
 
 @app.route('/success')
 def success():

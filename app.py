@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template(url_for('login.html')) 
+    return render_template('login.html') 
   
 @app.route('/success/<name>')
 def success(name):

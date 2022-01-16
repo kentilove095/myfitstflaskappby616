@@ -1,11 +1,11 @@
 from ast import Return
-from flask import Flask, redirect, url_for, request
+from flask import Flask, redirect, url_for,render_template, request
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return redirect(url_for('login.html')) 
+    return render_template(url_for('login.html')) 
   
 @app.route('/success/<name>')
 def success(name):

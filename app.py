@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return "Hello My First Application"
+@app.route('/hello')
 def hello_world():
        return 'hello world'
 app.add_url_rule('/', 'hello', hello_world)
